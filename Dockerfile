@@ -4,9 +4,9 @@ RUN mkdir -p /app
 COPY frontend /app/frontend
 
 WORKDIR /app/frontend
-RUN npm install pnpm -g
-RUN pnpm install
-RUN pnpm build
+# RUN npm install pnpm -g
+# RUN pnpm install
+# RUN pnpm build
 
 FROM python:3.10-alpine
 
