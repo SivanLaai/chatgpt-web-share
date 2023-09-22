@@ -536,7 +536,6 @@ async def chat(websocket: WebSocket):
                 queueing_time=queueing_time,
                 ask_time=ask_time,
             ).create()
-
         websocket.scope["ask_websocket_close_code"] = websocket_code
         websocket.scope["ask_websocket_close_reason"] = websocket_reason
         await websocket.close(websocket_code, websocket_reason)

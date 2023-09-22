@@ -346,7 +346,7 @@ const sendMsg = async () => {
     aborter = null;
     canAbort.value = false;
     console.log('WebSocket connection is closed', event, isAborted.value);
-    if (!hasError && (event.code == 1000 || isAborted.value)) {
+    if (!hasError && (event.code == 1000 || event.code == 1006 || isAborted.value)) {
       // 正常关闭
       if (hasGotReply) {
         let allNewMessages = [] as BaseChatMessage[];
